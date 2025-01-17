@@ -28,7 +28,7 @@ public class DataController {
         return dataService.getAllData();
     }
 
-    @PostMapping
+    @PostMapping("/save")
     public Data save(Data data){
       return  dataService.save(data);
     }
