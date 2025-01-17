@@ -5,6 +5,8 @@ RUN apk add --no-cache maven
 WORKDIR /app
 COPY . .
 
+RUN mvn clean install
+
 FROM openjdk:17-jdk-alpine
 COPY --from=build /app/target/*.jar app.jar
 
